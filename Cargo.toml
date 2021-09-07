@@ -1,0 +1,28 @@
+[package]
+name = "png2wasm4src"
+version = "0.1.0"
+repository = "https://gitlab.com/claudiomattera/png2wasm4src"
+authors = ["Claudio Mattera <dev@claudiomattera.it>"]
+description = "Convert indexed PNG images to Rust source code for WASM-4 engine"
+edition = "2018"
+license = "MIT"
+readme = "Readme.md"
+exclude = [
+    ".drone.yml",
+]
+keywords = [
+    "png",
+    "wasm",
+]
+categories = [
+    "game-development",
+    "multimedia::encoding",
+]
+
+[dependencies]
+thiserror = "1"
+image = { version = "0.23", default-features = false, features = ["png"] }
+png = "0.17"
+
+[dev-dependencies]
+anyhow = "1"
